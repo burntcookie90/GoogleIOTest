@@ -10,7 +10,7 @@ public class MainPresenterImpl extends AbstractPresenter<MainView> implements Ma
     private User mUser;
 
     @Override
-    public void getUser() {
+    public void createUser() {
         mUser = new User("vishnu");
         getView().displayUser(mUser);
     }
