@@ -1,1 +1,1 @@
-include ':app', ':mvp-java'
+include ':mvp-test', ':mvp-java', ':retrofit-test', ':mvvm-test'

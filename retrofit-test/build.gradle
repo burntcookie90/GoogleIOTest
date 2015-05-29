@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.android.databinding'
+
+android {
+    compileSdkVersion 'android-MNC'
+    buildToolsVersion "23.0.0 rc1"
+
+    defaultConfig {
+        applicationId "io.dwak.retrofittest"
+        minSdkVersion 'MNC'
+        targetSdkVersion 'MNC'
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'io.reactivex:rxjava:1.0.11'
+    compile 'io.reactivex:rxandroid:0.24.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+}
