@@ -6,8 +6,17 @@ import io.dwak.googleiotest.view.MainView;
 import io.dwak.mvp_java.AbstractPresenter;
 
 public class MainPresenterImpl extends AbstractPresenter<MainView> implements MainPresenter {
+
+    private User mUser;
+
     @Override
     public void getUser() {
-        getView().displayUser(new User("vishnu"));
+        mUser = new User("vishnu");
+        getView().displayUser(mUser);
+    }
+
+    @Override
+    public void updateUser(String name) {
+        mUser.setName(name);
     }
 }

@@ -4,6 +4,10 @@
     <data>
 
         <variable
+            name="activity"
+            type="io.dwak.googleiotest.main.MainActivity"/>
+
+        <variable
             name="user"
             type="io.dwak.googleiotest.model.User"/>
     </data>
@@ -20,11 +24,14 @@
         tools:context="io.dwak.googleiotest.main.MainActivity">
 
         <TextView
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.name}"/>
 
         <Button
+            android:id="@+id/button"
+            android:layout_below="@id/user_name"
             android:text="Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
